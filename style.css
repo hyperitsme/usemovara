@@ -1,0 +1,98 @@
+/* ===== base tokens (match Section 1) ===== */
+:root{
+  --bg:#0a0a0a;
+  --card:#121212;
+  --muted:#7a7a7a;
+  --text:#eaeaea;
+  --accent:#9eff00;
+  --outline:#2a2a2a;
+}
+html,body{background:var(--bg);color:var(--text)}
+body{font-family:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace; margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ===== Section 2 ===== */
+.section-2{
+  border-top:1px solid var(--outline);
+  border-bottom:1px solid var(--outline);
+  padding:66px 0 78px;
+  margin-top:26px;
+}
+
+/* selalu 3 kolom (menyamping) seperti contoh; baru pecah 1 kolom di device kecil */
+.s2-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:64px;
+  align-items:start;
+}
+
+@media (max-width:860px){
+  .s2-grid{ grid-template-columns:1fr; gap:36px; }
+}
+
+.s2-item{ max-width:720px; }
+.s2-kicker{
+  display:flex; align-items:center; gap:12px;
+  font-size:12px; letter-spacing:1.6px;
+  text-transform:uppercase; color:var(--accent);
+  margin-bottom:18px;
+}
+.s2-kicker img{ width:18px; height:18px; display:block; }
+
+.s2-lead{
+  font-size:28px; line-height:1.35; font-weight:700; margin:0;
+  color:var(--text);
+}
+@media (max-width:520px){ .s2-lead{font-size:24px} }
+
+/* micro-interaction */
+.s2-item:hover .s2-kicker{ color:#caff64; }
+/* ===== Section 3 ===== */
+.section-3{
+  border-top:1px solid var(--outline);
+  border-bottom:1px solid var(--outline);
+  padding:56px 0 86px;
+  overflow:hidden;
+}
+
+/* typing banner (bolak-balik) */
+.type-row{
+  font-size:12px; letter-spacing:1.6px; text-transform:uppercase;
+  color:var(--accent); display:flex; align-items:center; gap:8px;
+  margin:0 24px 28px;
+  font-weight:700;
+}
+.type-row .hash{color:var(--accent)}
+.typewriter{
+  --w: 22ch;                /* panjang teks */
+  position:relative;
+  white-space:nowrap;
+  width:var(--w);
+  border-right:2px solid var(--accent);
+  overflow:hidden;
+  animation:typing 3.4s steps(22) infinite alternate,
+           blink .9s step-end infinite;
+}
+@keyframes typing{ from{width:0} to{width:var(--w)} }
+@keyframes blink{ 50%{border-color:transparent} }
+
+/* ===== Diagram (SVG responsive wrapper) ===== */
+.flow{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  padding:8px 24px 0;
+}
+.flow svg{ width:100%; height:auto; display:block; }
+
+/* helper for small screens: scale down a bit */
+@media (max-width:900px){
+  .flow svg{ transform:scale(.95); transform-origin:top left; }
+}
+@media (max-width:720px){
+  .flow svg{ transform:scale(.85); }
+}
+@media (max-width:560px){
+  .flow svg{ transform:scale(.78); }
+}
