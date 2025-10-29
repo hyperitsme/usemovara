@@ -14,7 +14,7 @@
     --card:#121212;
     --muted:#7a7a7a;
     --text:#eaeaea;
-    --accent:#9eff00;
+    --accent:#00c9ff;
     --outline:#2a2a2a;
   }
   *{box-sizing:border-box}
@@ -61,16 +61,16 @@
   .card:hover{
     transform:translateY(-2px);
     border-color:#2f2f2f;
-    box-shadow:0 0 0 1px rgba(158,255,0,.08), 0 10px 30px rgba(0,0,0,.45);
+    box-shadow:0 0 0 1px rgba(0,235,250,.55), 0 10px 30px rgba(0,0,0,.45);
   }
 
   /* Subtle background motif like “X” blobs */
   .card::after{
     content:"";position:absolute;inset:-10%;
     background:
-      radial-gradient(35% 35% at 25% 25%, rgba(158,255,0,.06), transparent 60%),
-      radial-gradient(28% 28% at 80% 65%, rgba(158,255,0,.05), transparent 65%),
-      radial-gradient(50% 50% at 120% -10%, rgba(158,255,0,.04), transparent 60%);
+      radial-gradient(35% 35% at 25% 25%, rgba(10,235,250,.55), transparent 60%),
+      radial-gradient(28% 28% at 80% 65%, rgba(0,235,250,.56), transparent 65%),
+      radial-gradient(50% 50% at 120% -10%, rgba(0,235,250,.57), transparent 60%);
     filter:blur(2px);
     z-index:0;
   }
@@ -273,9 +273,9 @@
 <!-- ========== SECTION 3: HOW MOVARA WORKS (self-contained) ========== -->
 <section class="section-3" style="border-top:1px solid var(--outline,#2a2a2a);border-bottom:1px solid var(--outline,#2a2a2a);padding:56px 0 86px;overflow:hidden;">
   <!-- Typing banner -->
-  <div class="type-row" style="font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--accent,#9eff00);display:flex;align-items:center;gap:8px;margin:0 24px 28px;font-weight:700;">
-    <span style="color:var(--accent,#9eff00)">#</span>
-    <div id="typewriter" style="position:relative;white-space:nowrap;border-right:2px solid var(--accent,#9eff00);overflow:hidden"></div>
+  <div class="type-row" style="font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--accent,#00c9ff);display:flex;align-items:center;gap:8px;margin:0 24px 28px;font-weight:700;">
+    <span style="color:var(--accent,#00c9ff)">#</span>
+    <div id="typewriter" style="position:relative;white-space:nowrap;border-right:2px solid var(--accent,#00c9ff);overflow:hidden"></div>
   </div>
 
   <!-- Diagram -->
@@ -284,14 +284,14 @@
       <defs>
         <style>
           .box{ fill:#0f0f0f; stroke:#2a2a2a; stroke-width:1; rx:10; }
-          .box--accent{ fill:#111; stroke:#9eff00; filter:url(#g); animation:pulse 3.6s ease-in-out infinite }
+          .box--accent{ fill:#111; stroke:#00c9ff; filter:url(#g); animation:pulse 3.6s ease-in-out infinite }
           .lbl{ font: 14px 'IBM Plex Mono', monospace; fill:#eaeaea; }
           .lbl--small{ font: 12px 'IBM Plex Mono', monospace; fill:#c9c9c9; }
-          .kicker{ font: 12px 'IBM Plex Mono', monospace; fill:#9eff00; text-transform:uppercase; letter-spacing:1.6px; }
-          .circle{ fill:none; stroke:#9eff00; stroke-width:2; stroke-dasharray:6 6; }
+          .kicker{ font: 12px 'IBM Plex Mono', monospace; fill:#00c9ff; text-transform:uppercase; letter-spacing:1.6px; }
+          .circle{ fill:none; stroke:#00c9ff; stroke-width:2; stroke-dasharray:6 6; }
           .arrow,.arrow--muted{ fill:none; stroke-linecap:round; }
           /* flowing arrows */
-          .arrow{ stroke:#9eff00; stroke-width:1.6; stroke-dasharray:8 10; animation:flow 2.4s linear infinite; animation-delay:var(--delay,0s); }
+          .arrow{ stroke:#00c9ff; stroke-width:1.6; stroke-dasharray:8 10; animation:flow 2.4s linear infinite; animation-delay:var(--delay,0s); }
           .arrow--muted{ stroke:#6a6a6a; stroke-width:1.4; stroke-dasharray:4 8; opacity:.7; animation:flow 3.2s linear infinite; animation-delay:var(--delay,0s); }
           .note{ font: 11px 'IBM Plex Mono', monospace; fill:#b5ff4d; }
           @keyframes flow{ to{ stroke-dashoffset:-220 } }
@@ -303,12 +303,12 @@
 
         <!-- glow filter -->
         <filter id="g" x="-40%" y="-40%" width="180%" height="180%">
-          <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#9eff00" flood-opacity=".35"/>
+          <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#00c9ff" flood-opacity=".35"/>
         </filter>
 
         <!-- markers -->
         <marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6" fill="#9eff00"/>
+          <path d="M0,0 L8,3 L0,6" fill="#00c9ff"/>
         </marker>
         <marker id="m2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
           <path d="M0,0 L8,3 L0,6" fill="#6a6a6a"/>
@@ -419,9 +419,9 @@
   <!-- Typewriter header -->
   <div style="display:flex;align-items:center;gap:8px;margin:0 24px 20px;
               font-family:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
-              font-size:12px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;color:var(--accent,#9eff00);">
+              font-size:12px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;color:var(--accent,#00c9ff);">
     <span>#</span>
-    <div id="typewriter-feat" style="white-space:nowrap;border-right:2px solid var(--accent,#9eff00);overflow:hidden"></div>
+    <div id="typewriter-feat" style="white-space:nowrap;border-right:2px solid var(--accent,#00c9ff);overflow:hidden"></div>
   </div>
 
   <div class="wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;">
@@ -437,7 +437,7 @@
       <div class="right">
         <p style="margin:0 0 14px;color:#c9c9c9;font-size:13.5px;line-height:1.85;
                   font-family:'IBM Plex Mono',monospace;word-break:break-word;hyphens:auto;">
-          <span style="color:var(--accent,#9eff00);text-transform:uppercase;letter-spacing:1.2px;font-weight:600;">Core Concept</span><br>
+          <span style="color:var(--accent,#00c9ff);text-transform:uppercase;letter-spacing:1.2px;font-weight:600;">Core Concept</span><br>
           The Auto Trader Engine is the beating heart of the Movara platform — a smart, autonomous trading module that executes buy and sell orders on behalf of the user. It integrates with decentralized exchanges (DEXs) and perpetual protocols across the Base ecosystem, enabling fully automated, non-custodial trading.
         </p>
         <p style="margin:0;color:#c9c9c9;font-size:13.5px;line-height:1.85;
@@ -459,7 +459,7 @@
       <div class="right">
         <p style="margin:0;color:#c9c9c9;font-size:13.5px;line-height:1.85;
                   font-family:'IBM Plex Mono',monospace;word-break:break-word;hyphens:auto;">
-          <span style="color:var(--accent,#9eff00);text-transform:uppercase;letter-spacing:1.2px;font-weight:600;">Introduction</span><br>
+          <span style="color:var(--accent,#00c9ff);text-transform:uppercase;letter-spacing:1.2px;font-weight:600;">Introduction</span><br>
           Movara’s Perpetual Signal System is an AI-driven engine that continuously monitors and analyzes on-chain and off-chain market data to generate high-confidence trading alerts. These signals guide traders with data-backed insights on when to enter or exit positions — particularly useful in volatile or uncertain market conditions.
         </p>
       </div>
@@ -477,7 +477,7 @@
       <div class="right">
         <p style="margin:0;color:#c9c9c9;font-size:13.5px;line-height:1.85;
                   font-family:'IBM Plex Mono',monospace;word-break:break-word;hyphens:auto;">
-          <span style="color:var(--accent,#9eff00);text-transform:uppercase;letter-spacing:1.2px;font-weight:600;">Purpose</span><br>
+          <span style="color:var(--accent,#00c9ff);text-transform:uppercase;letter-spacing:1.2px;font-weight:600;">Purpose</span><br>
           The Non-KYC Visa Card is Movara’s bridge between decentralized wealth and real-world usability. It enables crypto users to spend their assets globally without undergoing traditional banking verification or centralized control, promoting true financial sovereignty.
         </p>
       </div>
@@ -524,9 +524,9 @@
   <!-- header kecil + typewriter -->
   <div style="display:flex;align-items:center;gap:8px;margin:0 24px 18px;
               font-family:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
-              font-size:12px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;color:var(--accent,#9eff00);">
+              font-size:12px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;color:var(--accent,#00c9ff);">
     <span>#</span>
-    <div id="typewriter-core" style="white-space:nowrap;border-right:2px solid var(--accent,#9eff00);overflow:hidden"></div>
+    <div id="typewriter-core" style="white-space:nowrap;border-right:2px solid var(--accent,#00c9ff);overflow:hidden"></div>
   </div>
 
   <div class="wrap" style="max-width:1200px;margin:0 auto;padding:0 24px">
@@ -579,7 +579,7 @@
                   font-family:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
                   font-size:13.6px;line-height:1.85;letter-spacing:.1px;">
           Through AI-driven perpetual signals, users receive continuous insights that improve trading accuracy
-          and portfolio decisions. Additionally, <span style="color:var(--accent,#9eff00)">$MOVARA</span>
+          and portfolio decisions. Additionally, <span style="color:var(--accent,#00c9ff)">$MOVARA</span>
           staking rewards users with ecosystem benefits and exclusive access.
         </p>
       </article>
@@ -649,9 +649,9 @@
   <!-- Header + typewriter -->
   <div style="display:flex;align-items:center;gap:8px;margin:0 24px 18px;
               font-family:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
-              font-size:12px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;color:var(--accent,#9eff00);">
+              font-size:12px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;color:var(--accent,#00c9ff);">
     <span>#</span>
-    <div id="typewriter-faq" style="white-space:nowrap;border-right:2px solid var(--accent,#9eff00);overflow:hidden"></div>
+    <div id="typewriter-faq" style="white-space:nowrap;border-right:2px solid var(--accent,#00c9ff);overflow:hidden"></div>
   </div>
 
   <div class="wrap" style="max-width:1200px;margin:0 auto;padding:0 24px">
@@ -787,7 +787,7 @@
   <style>
     /* plus -> minus on open */
     #faq details[open] summary .ico i:first-child{ border-left-color:transparent !important; }
-    #faq details[open] summary .ico i:last-child{ border-top-color:#9eff00 !important; }
+    #faq details[open] summary .ico i:last-child{ border-top-color:#00c9ff !important; }
 
     /* hover state */
     #faq summary:hover{ background:#0f0f0f; }
@@ -884,7 +884,7 @@
 
   <!-- hover micro-anim -->
   <style>
-    #site-footer a:hover{ border-color:var(--accent,#9eff00) !important; color:var(--accent,#9eff00) !important; box-shadow:0 0 0 1px rgba(158,255,0,.08) inset }
+    #site-footer a:hover{ border-color:var(--accent,#00c9ff) !important; color:var(--accent,#00c9ff) !important; box-shadow:0 0 0 1px rgba(158,255,0,.08) inset }
     @media (max-width:900px){
       #site-footer .wrap:first-of-type{ grid-template-columns:1fr !important; gap:18px !important }
       #site-footer img{ width:62px !important; height:62px !important }
