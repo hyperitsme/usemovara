@@ -97,14 +97,14 @@
   .cta{
     display:inline-flex;align-items:center;gap:10px;
     background:transparent;color:var(--accent);
-    border:1px solid rgba(158,255,0,.45);
+    border:1px solid rgba(0, 235, 250, .06);
     padding:12px 16px;border-radius:6px;
     font-size:12px;text-transform:uppercase;letter-spacing:1px;
     text-decoration:none;user-select:none;
     transition:background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
   }
   .cta:hover{
-    background:rgba(158,255,0,.08);
+    background:rgba(0, 235, 250, .06);
     border-color:var(--accent);
     transform:translateY(-1px);
   }
@@ -295,7 +295,7 @@
           .arrow--muted{ stroke:#6a6a6a; stroke-width:1.4; stroke-dasharray:4 8; opacity:.7; animation:flow 3.2s linear infinite; animation-delay:var(--delay,0s); }
           .note{ font: 11px 'IBM Plex Mono', monospace; fill:#00c9ff; }
           @keyframes flow{ to{ stroke-dashoffset:-220 } }
-          @keyframes pulse{ 0%,100%{ filter:url(#g) } 50%{ filter:drop-shadow(0 0 14px rgba(158,255,0,.55)) } }
+          @keyframes pulse{ 0%,100%{ filter:url(#g) } 50%{ filter:drop-shadow(0 0 14px rgba(0, 235, 250, .06)) } }
           @media (prefers-reduced-motion:reduce){
             .arrow,.arrow--muted,.box--accent{ animation:none }
           }
